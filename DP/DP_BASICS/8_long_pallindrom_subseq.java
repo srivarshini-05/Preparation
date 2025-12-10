@@ -1,0 +1,27 @@
+package dynamicProgramming;
+import java.util.*;
+public class longpalin {
+    public static int pal(String s){
+        int n=s.length();
+        int[][] dp=new int[n][n];
+        for(int i=0;i<n;i++){
+            dp[i][i]=1;
+        }
+        for(int i=n-2;i>=0;i--){
+            for(int j=i+1;j<n;j++){
+                if(s.charAt(i)==s.charAt(j)){
+                    dp[i][j]=dp[i+1][j-1]+2;
+                }
+                else{
+                    dp[i][j]=Math.max(dp[i][j-1],dp[i+1][j]);
+                }
+            }
+        }
+        return dp[0][n-1];
+    }
+    public static void main(String[] args){
+        String s="mbadm";
+        System.out.println(pal(s));
+        System.out.println(s.length()-pal(s));
+    }
+}
