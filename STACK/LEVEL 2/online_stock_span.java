@@ -1,3 +1,5 @@
+//Hint-->previous greater....curr index-prev greater index=ans
+
 class StockSpanner {
     Stack<int[]>s=new Stack<>();
     int ind;
