@@ -1,3 +1,13 @@
+//method 2
+public void push(int x) {
+        int s=q1.size();
+        q1.offer(x);
+        for(int i=0;i<s;i++){
+            q1.offer(q1.poll());
+        }
+    }
+///////////
+
 class MyStack {
     Deque<Integer> q1;
     Deque<Integer> q2;
