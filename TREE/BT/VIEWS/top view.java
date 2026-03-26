@@ -59,6 +59,10 @@ public class Solution {
             Pair p=qq.poll();
             Node t=p.n;
             int hd=p.hd;
+                    //-----------------------change for bottom view------------------
+    // CHANGE HERE: overwrite every time
+    //map.put(hd, t.data);
+
             if(map.get(hd)==null)map.put(hd,t.data);
             if(t.left!=null){
                 qq.add(new Pair(t.left,hd-1));
