@@ -67,6 +67,7 @@ public class Solution {
                 qq.add(new Pair(t.right,hd+1));
             }
         }
+//for(int p:map.values())
         for(Map.Entry<Integer,Integer> d:map.entrySet()){
             System.out.print(d.getValue()+" ");
         }
