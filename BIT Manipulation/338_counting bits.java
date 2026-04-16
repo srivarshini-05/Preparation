@@ -7,3 +7,6 @@ class Solution {
         return dp;
     }
 }
+
+//method 2
+dp[i]=dp[i>>1]&(i&1)
